@@ -1,4 +1,4 @@
-# evaluaciones_mongo_crud
+# sintomas_crud
 
 API CRUD para el registro de estado de salud diario para el cliente de alternancia 
 
