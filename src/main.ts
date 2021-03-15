@@ -19,6 +19,6 @@ async function bootstrap() {
   SwaggerModule.setup('swagger', app, document);
   
   
-  await app.listen( parseInt(environment.HTTP_PORT,10) || 3000);
+  await app.listen( parseInt(environment.HTTP_PORT,10) || 8080);
 }
 bootstrap();
