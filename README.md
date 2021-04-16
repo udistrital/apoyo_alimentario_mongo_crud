@@ -1,6 +1,6 @@
 # apoyo_alimentario_crud
 
-API CRUD para el registro de la asistencia al servicio de apoyo alimentario 
+API CRUD para el registro de la asistencia al servicio de apoyo alimentario
 
 ## Especificaciones Técnicas
 
@@ -34,18 +34,17 @@ cd apoyo_alimentario_mongo_crud
 git pull origin develop && git checkout develop
 
 4. Instalar dependencias
-npm install 
+npm install
 #o
 npm i
 
 # 5. Alimentar todas las variables de entorno que utiliza el proyecto.
-APOYO_ALIMENTARIO_CRUD_HTTP_PORT=8080 
+APOYO_ALIMENTARIO_CRUD_HTTP_PORT=8080
 APOYO_ALIMENTARIO_CRUD_HOST=127.0.0.1:27017 APOYO_ALIMENTARIO_CRUD_SOME_VARIABLE=some_value nest run
 ```
 ### Ejecución Dockerfile
 ```shell
-# docker build --tag=apoyo_alimentario_crud . --no-cache
-# docker run -p 80:80 apoyo_alimentario_crud
+# Implementado para despliegue del Sistema de integración continua CI.
 ```
 
 ### Ejecución docker-compose
@@ -83,7 +82,7 @@ Pruebas unitarias
 
 | Develop | Relese 0.0.1 | Master |
 | -- | -- | -- |
-| [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/sintomas_crud/status.svg?ref=refs/heads/develop)](https://hubci.portaloas.udistrital.edu.co/udistrital/sintomas_crud) | [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/sintomas_crud/status.svg?ref=refs/heads/release/0.0.1)](https://hubci.portaloas.udistrital.edu.co/udistrital/sintomas_crud) |  [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/sintomas_crud/status.svg)](https://hubci.portaloas.udistrital.edu.co/udistrital/sintomas_crud) |
+| [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/apoyo_alimentario_mongo_crud/status.svg?ref=refs/heads/develop)](https://hubci.portaloas.udistrital.edu.co/udistrital/apoyo_alimentario_mongo_crud) | [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/apoyo_alimentario_mongo_crud/status.svg?ref=refs/heads/relase/0.0.1)](https://hubci.portaloas.udistrital.edu.co/udistrital/apoyo_alimentario_mongo_crud) | [![Build Status](https://hubci.portaloas.udistrital.edu.co/api/badges/udistrital/apoyo_alimentario_mongo_crud/status.svg?ref=refs/heads/master)](https://hubci.portaloas.udistrital.edu.co/udistrital/apoyo_alimentario_mongo_crud) |
 
 
 ## Licencia
@@ -94,4 +93,4 @@ apoyo_alimentario_mongo_crud is free software: you can redistribute it and/or mo
 
  apoyo_alimentario_mongo_crud is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License along with sintomas_crud. If not, see https://www.gnu.org/licenses/.
+You should have received a copy of the GNU General Public License along with apoyo_alimentario_mongo_crud. If not, see https://www.gnu.org/licenses/.
