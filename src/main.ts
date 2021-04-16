@@ -10,8 +10,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors();
   const options = new DocumentBuilder()
-  .setTitle('sintomas_crud')
-  .setDescription('API CRUD para el registro de estado de salud diario para el cliente de alternancia.')
+  .setTitle('apoyo_alimentario')
+  .setDescription('API CRUD para el registro diario de la entrega del apoyo alimentario')
   .setVersion('1.0')
   .build();
   const document = SwaggerModule.createDocument(app, options);

@@ -1,6 +1,6 @@
-# sintomas_crud
+# apoyo_alimentario_crud
 
-API CRUD para el registro de estado de salud diario para el cliente de alternancia 
+API CRUD para el registro de la asistencia al servicio de apoyo alimentario 
 
 ## Especificaciones Técnicas
 
@@ -12,23 +12,23 @@ API CRUD para el registro de estado de salud diario para el cliente de alternanc
 
 ### Variables de Entorno
 ```shell
-SINTOMAS_CRUD_USER=[Usuario de BD]
-SINTOMAS_CRUD_PASS=[Contraseña del usuario de BD]
-SINTOMAS_CRUD_HOST=[URL, Dominio o EndPoint de la BD]
-SINTOMAS_CRUD_PORT=[Puerto de la BD]
-SINTOMAS_CRUD_DB=[Nombre de Base de Datos]
-SINTOMAS_CRUD_DB=[Nombre de Base de Datos de Autenticación]
-SINTOMAS_CRUD_HTTP_PORT=[Puerto de exposición del API]
+APOYO_ALIMENTARIO_CRUD_USER=[Usuario de BD]
+APOYO_ALIMENTARIO_CRUD_PASS=[Contraseña del usuario de BD]
+APOYO_ALIMENTARIO_CRUD_HOST=[URL, Dominio o EndPoint de la BD]
+APOYO_ALIMENTARIO_CRUD_PORT=[Puerto de la BD]
+APOYO_ALIMENTARIO_CRUD_DB=[Nombre de Base de Datos]
+APOYO_ALIMENTARIO_CRUD_DB=[Nombre de Base de Datos de Autenticación]
+APOYO_ALIMENTARIO_CRUD_HTTP_PORT=[Puerto de exposición del API]
 ```
-**NOTA:** Las variables se pueden ver en el fichero conf/app.conf y están identificadas con SINTOMAS_CRUD...
+**NOTA:** Las variables se pueden ver en el fichero conf/app.conf y están identificadas con APOYO_ALIMENTARIO_CRUD...
 
 ### Ejecución del Proyecto
 ```shell
 #1. Obtener el repositorio con nest
-git clone https://github.com/udistrital/sintomas_crud
+git clone https://github.com/udistrital/apoyo_alimentario_mongo_crud
 
 #2. Moverse a la carpeta del repositorio
-cd sintomas_crud
+cd apoyo_alimentario_mongo_crud
 
 # 3. Moverse a la rama **develop**
 git pull origin develop && git checkout develop
@@ -39,22 +39,22 @@ npm install
 npm i
 
 # 5. Alimentar todas las variables de entorno que utiliza el proyecto.
-SINTOMAS_CRUD_HTTP_PORT=8080 
-SINTOMAS_CRUD_HOST=127.0.0.1:27017 SINTOMAS_CRUD_SOME_VARIABLE=some_value nest run
+APOYO_ALIMENTARIO_CRUD_HTTP_PORT=8080 
+APOYO_ALIMENTARIO_CRUD_HOST=127.0.0.1:27017 APOYO_ALIMENTARIO_CRUD_SOME_VARIABLE=some_value nest run
 ```
 ### Ejecución Dockerfile
 ```shell
-# docker build --tag=sintomas_crud . --no-cache
-# docker run -p 80:80 sintomas_crud
+# docker build --tag=apoyo_alimentario_crud . --no-cache
+# docker run -p 80:80 apoyo_alimentario_crud
 ```
 
 ### Ejecución docker-compose
 ```shell
 #1. Clonar el repositorio
-git clone -b develop https://github.com/udistrital/sintomas_crud
+git clone -b develop https://github.com/udistrital/apoyo_alimentario_mongo_crud
 
 #2. Moverse a la carpeta del repositorio
-cd sintomas_crud
+cd apoyo_alimentario_mongo_crud
 
 #3. Crear un fichero con el nombre **custom.env**
 touch custom.env
@@ -88,10 +88,10 @@ Pruebas unitarias
 
 ## Licencia
 
-This file is part of sintomas_crud.
+This file is part of apoyo_alimentario_mongo_crud
 
-sintomas_crud is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+apoyo_alimentario_mongo_crud is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-sintomas_crud is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ apoyo_alimentario_mongo_crud is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with sintomas_crud. If not, see https://www.gnu.org/licenses/.
