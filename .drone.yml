@@ -69,7 +69,6 @@ steps:
   when:
     branch:
     - release/*
-
     event:
     - push
 
