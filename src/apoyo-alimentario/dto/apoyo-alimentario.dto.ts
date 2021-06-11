@@ -1,5 +1,5 @@
 
-import { ApiProperty } from '@ne.stjs/swagger';
+import { ApiProperty } from '@nestjs/swagger';
 
 
 export class ApoyoAlimentarioDto {
