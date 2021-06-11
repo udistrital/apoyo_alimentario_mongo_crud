@@ -17,7 +17,7 @@ APOYO_ALIMENTARIO_CRUD_PASS=[Contraseña del usuario de BD]
 APOYO_ALIMENTARIO_CRUD_HOST=[URL, Dominio o EndPoint de la BD]
 APOYO_ALIMENTARIO_CRUD_PORT=[Puerto de la BD]
 APOYO_ALIMENTARIO_CRUD_DB=[Nombre de Base de Datos]
-APOYO_ALIMENTARIO_CRUD_DB=[Nombre de Base de Datos de Autenticación]
+APOYO_ALIMENTARIO_CRUD_DB_AUTH=[Nombre de Base de Datos de Autenticación]
 APOYO_ALIMENTARIO_CRUD_HTTP_PORT=[Puerto de exposición del API]
 ```
 **NOTA:** Las variables se pueden ver en el fichero conf/app.conf y están identificadas con APOYO_ALIMENTARIO_CRUD...
