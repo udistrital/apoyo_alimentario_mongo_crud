@@ -6,8 +6,8 @@ import { FilterDto} from '../filters/dto/filter.dto';
 
 
 
-@ApiTags('apoyoAlimentario')
-@Controller('apoyoAlimentario')
+@ApiTags('apoyo_alimentario')
+@Controller('apoyo_alimentario')
 export class ApoyoAlimentarioController {
 
   constructor(private readonly apoyoAlimentarioService: ApoyoAlimentarioService) { }

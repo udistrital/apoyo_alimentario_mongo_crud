@@ -1,233 +1,233 @@
-{
-    "openapi": "3.0.0",
-    "info": {
-        "title": "apoyo_alimentario_crud",
-        "description": "API CRUD para el registro de estado de salud diario para el cliente de alternancia.",
-        "version": "1.0",
-        "contact": {}
-    },
-    "tags": [],
-    "servers": [],
-    "components": {
-        "schemas": {
-            "ApoyoAlimentarioDto": {
-                "type": "object",
-                "properties": {
-                    "terceroId": {
-                        "type": "number"
-                    },
-                    "solicitudId": {
-                        "type": "number"
-                    },
-                    "periodoId": {
-                        "type": "number"
-                    },
-                    "espacioFisicoId": {
-                        "type": "number"
-                    },
-                    "usuarioAdministrador": {
-                        "type": "string"
-                    },
-                    "activo": {
-                        "type": "boolean"
-                    },
-                    "fecha_creacion": {
-                        "format": "date-time",
-                        "type": "string"
-                    },
-                    "fecha_modificacion": {
-                        "format": "date-time",
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "terceroId",
-                    "solicitudId",
-                    "periodoId",
-                    "espacioFisicoId",
-                    "usuarioAdministrador",
-                    "activo",
-                    "fecha_creacion",
-                    "fecha_modificacion"
-                ]
-            }
-        }
-    },
-    "paths": {
-        "/apoyo_alimentario": {
-            "post": {
-                "operationId": "ApoyoAlimentarioController_post",
-                "parameters": [],
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ApoyoAlimentarioDto"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "201": {
-                        "description": ""
-                    }
-                },
-                "tags": [
-                    "apoyo_alimentario"
-                ]
-            },
-            "get": {
-                "operationId": "ApoyoAlimentarioController_getAll",
-                "parameters": [
-                    {
-                        "name": "query",
-                        "required": false,
-                        "in": "query",
-                        "description": "query - Filter. e.g. col1:v1,col2:v2 …",
-                        "schema": {
+    {
+        "openapi": "3.0.0",
+        "info": {
+            "title": "Apoyo alimentario CRUD",
+            "description": "API CRUD para el registro diario de la entrega del apoyo alimentario",
+            "version": "1.0",
+            "contact": {}
+        },
+        "tags": [],
+        "servers": [],
+        "components": {
+            "schemas": {
+                "ApoyoAlimentarioDto": {
+                    "type": "object",
+                    "properties": {
+                        "terceroId": {
+                            "type": "number"
+                        },
+                        "solicitudId": {
+                            "type": "number"
+                        },
+                        "periodoId": {
+                            "type": "number"
+                        },
+                        "espacioFisicoId": {
+                            "type": "number"
+                        },
+                        "usuarioAdministrador": {
+                            "type": "string"
+                        },
+                        "activo": {
+                            "type": "boolean"
+                        },
+                        "fecha_creacion": {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        "fecha_modificacion": {
+                            "format": "date-time",
                             "type": "string"
                         }
                     },
-                    {
-                        "name": "fields",
-                        "required": false,
-                        "in": "query",
-                        "description": "fields - Fields returned. e.g. col1,col2 …",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "sortby",
-                        "required": false,
-                        "in": "query",
-                        "description": "sortby - Sorted-by fields. e.g. col1,col2 …",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "order",
-                        "required": false,
-                        "in": "query",
-                        "description": "order - Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc …",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "limit",
-                        "required": false,
-                        "in": "query",
-                        "description": "limit - Limit the size of result set. Must be an integer",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "offset",
-                        "required": false,
-                        "in": "query",
-                        "description": "offset - Start position of result set. Must be an integer",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "name": "populate",
-                        "required": false,
-                        "in": "query",
-                        "description": "populate - show subqueries. Must be a boolean",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": ""
-                    }
-                },
-                "tags": [
-                    "apoyo_alimentario"
-                ]
+                    "required": [
+                        "terceroId",
+                        "solicitudId",
+                        "periodoId",
+                        "espacioFisicoId",
+                        "usuarioAdministrador",
+                        "activo",
+                        "fecha_creacion",
+                        "fecha_modificacion"
+                    ]
+                }
             }
         },
-        "/apoyo_alimentario/{id}": {
-            "get": {
-                "operationId": "ApoyoAlimentarioController_getById",
-                "parameters": [
-                    {
-                        "name": "id",
+        "paths": {
+            "/apoyo_alimentario": {
+                "post": {
+                    "operationId": "ApoyoAlimentarioController_post",
+                    "parameters": [],
+                    "requestBody": {
                         "required": true,
-                        "in": "path",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": ""
-                    }
-                },
-                "tags": [
-                    "apoyo_alimentario"
-                ]
-            },
-            "put": {
-                "operationId": "ApoyoAlimentarioController_put",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "required": true,
-                        "in": "path",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ApoyoAlimentarioDto"
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApoyoAlimentarioDto"
+                                }
                             }
                         }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "description": ""
-                    }
-                },
-                "tags": [
-                    "apoyo_alimentario"
-                ]
-            },
-            "delete": {
-                "operationId": "ApoyoAlimentarioController_delete",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "required": true,
-                        "in": "path",
-                        "schema": {
-                            "type": "string"
+                    },
+                    "responses": {
+                        "201": {
+                            "description": ""
                         }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": ""
-                    }
+                    },
+                    "tags": [
+                        "apoyoAlimentario"
+                    ]
                 },
-                "tags": [
-                    "apoyo_alimentario"
-                ]
+                "get": {
+                    "operationId": "ApoyoAlimentarioController_getAll",
+                    "parameters": [
+                        {
+                            "name": "query",
+                            "required": false,
+                            "in": "query",
+                            "description": "query - Filter. e.g. col1:v1,col2:v2 …",
+                            "schema": {
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "name": "fields",
+                            "required": false,
+                            "in": "query",
+                            "description": "fields - Fields returned. e.g. col1,col2 …",
+                            "schema": {
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "name": "sortby",
+                            "required": false,
+                            "in": "query",
+                            "description": "sortby - Sorted-by fields. e.g. col1,col2 …",
+                            "schema": {
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "name": "order",
+                            "required": false,
+                            "in": "query",
+                            "description": "order - Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc …",
+                            "schema": {
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "name": "limit",
+                            "required": false,
+                            "in": "query",
+                            "description": "limit - Limit the size of result set. Must be an integer",
+                            "schema": {
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "name": "offset",
+                            "required": false,
+                            "in": "query",
+                            "description": "offset - Start position of result set. Must be an integer",
+                            "schema": {
+                                "type": "string"
+                            }
+                        },
+                        {
+                            "name": "populate",
+                            "required": false,
+                            "in": "query",
+                            "description": "populate - show subqueries. Must be a boolean",
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": ""
+                        }
+                    },
+                    "tags": [
+                        "apoyoAlimentario"
+                    ]
+                }
+            },
+            "/apoyoAlimentario/{id}": {
+                "get": {
+                    "operationId": "ApoyoAlimentarioController_getById",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "required": true,
+                            "in": "path",
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": ""
+                        }
+                    },
+                    "tags": [
+                        "apoyoAlimentario"
+                    ]
+                },
+                "put": {
+                    "operationId": "ApoyoAlimentarioController_put",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "required": true,
+                            "in": "path",
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    ],
+                    "requestBody": {
+                        "required": true,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApoyoAlimentarioDto"
+                                }
+                            }
+                        }
+                    },
+                    "responses": {
+                        "200": {
+                            "description": ""
+                        }
+                    },
+                    "tags": [
+                        "apoyoAlimentario"
+                    ]
+                },
+                "delete": {
+                    "operationId": "ApoyoAlimentarioController_delete",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "required": true,
+                            "in": "path",
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": ""
+                        }
+                    },
+                    "tags": [
+                        "apoyoAlimentario"
+                    ]
+                }
             }
         }
     }
-}w
