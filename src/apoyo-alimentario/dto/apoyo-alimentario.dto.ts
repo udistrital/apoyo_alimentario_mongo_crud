@@ -20,6 +20,9 @@ export class ApoyoAlimentarioDto {
   readonly usuarioAdministrador: string;
 
   @ApiProperty()
+  readonly fechaRegistro: string;
+
+  @ApiProperty()
   readonly activo: boolean;
 
   @ApiProperty()
