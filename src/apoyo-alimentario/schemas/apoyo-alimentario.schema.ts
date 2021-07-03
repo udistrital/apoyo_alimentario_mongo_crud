@@ -20,6 +20,9 @@ export class ApoyoAlimentario extends Document{
   usuarioAdministrador: string;  
 
   @Prop({ required: true })
+  fechaRegistro: string;  
+
+  @Prop({ required: true })
   activo: boolean
 
   @Prop({ required: true })
