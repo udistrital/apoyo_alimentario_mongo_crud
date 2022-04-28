@@ -1,6 +1,6 @@
 # apoyo_alimentario_crud
 
-API CRUD para el registro de la asistencia al servicio de apoyo alimentario
+API CRUD para el registro de la asistencia al servicio de apoyo alimentario de bienestar institucional
 
 ## Especificaciones Técnicas
 
